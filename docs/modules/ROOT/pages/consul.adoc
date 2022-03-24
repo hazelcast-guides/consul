@@ -1,23 +1,27 @@
-:github-address: https://github.com/hazelcast-guides/consul.git
-:templates-url: templates:ROOT:page$/
-
 = Hazelcast with Consul Service Mesh
-
-include::{templates-url}/link-to-repo.adoc[]
+:templates-url: templates:ROOT:page$/
+:page-layout: tutorial
+:page-product: imdg
+:page-categories: Deployment, Kubernetes
+:page-lang: java
+:page-est-time: 20 mins
+:description: This tutorial explains how to use Hazelcast in the Consul environment. You'll learn how to set up a Hazelcast cluster and connect a Hazelcast client to it. Then, you will also see how to deploy an application with embedded Hazelcast.
 
 == What You’ll Learn
 
-This guide explains how to use Hazelcast in the Consul environment. You'll learn how to set up a Hazelcast cluster and connect it with Hazelcast client. Then, you will also see how to deploy an application with embedded Hazelcast.
+{description}
 
-== Prerequisites
+== Before you Begin
 
 === Kubernetes Cluster
-In this guide, a Google Kubernetes Engine is used but you can use any Kubernetes cluster you choose.
+
+In this tutorial, a Google Kubernetes Engine is used but you can use any Kubernetes cluster you choose.
 ----
 gcloud container clusters create hazelcast-cluster --num-nodes=4
 ----
 
 === Helm
+
 You will need Helm 3 to install Consul. Please see https://helm.sh/docs/intro/install/[here] to see Helm installation details.
 
 === Consul
@@ -229,4 +233,4 @@ kubectl delete -f hazelcast-embedded.yaml
 
 == Summary
 
-This guide demonstrates how to use Hazelcast Embedded and Client-Server topology in Consul environment with automatic Consul Connect injection. Hazelcast continuously tries to support cloud native technologies and verifies those environments as they evolve.
+This tutorial demonstrates how to use Hazelcast Embedded and client/server topology in Consul environment with automatic Consul Connect injection. Hazelcast continuously tries to support cloud native technologies and verifies those environments as they evolve.
